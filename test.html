@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试</title>
+</head>
+<body>
+    <button id="testBtn">测试按钮</button>
+    <div id="output">点击按钮测试</div>
+    
+    <script>
+        console.log('Script loaded');
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded');
+            const btn = document.getElementById('testBtn');
+            const output = document.getElementById('output');
+            
+            if (btn) {
+                console.log('Button found');
+                btn.addEventListener('click', () => {
+                    console.log('Button clicked');
+                    output.textContent = '按钮工作正常！';
+                });
+            } else {
+                console.log('Button not found');
+            }
+        });
+    </script>
+</body>
+</html>
